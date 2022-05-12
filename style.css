@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+body {
+     background: linear-gradient(to right, #35c2b6 , #05697a ); 
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+}
+
+.grid-container > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: #111;
+    color: #eee;
+}
+
+.grid-container > button:hover {
+    background-color: rgb(255, 255, 255);
+    transition: 0.1s;
+    color: #111;
+}
+
+.grid-container > .operador {
+    background: #35c2b6;
+}
+
+.grid-container > .inputs-container {
+    grid-column: 1 / -1;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+
+.deletar {
+    grid-column: span 2;
+}
+
+.dois-espacos {
+    grid-column: span 2;
+}
+
+.grid-container > .inputs-container > .operacao {
+    color: rgb(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.grid-container > .inputs-container > .input-resultado {
+    color: white;
+    font-size: 2.5rem;
+}
